@@ -33,9 +33,6 @@ public class Hanzawa implements ClassFileTransformer {
 						&& !m.getClassName().startsWith("sun.")
 						&& m.getMethod().getReturnType()
 								.equals(CtClass.intType)) {
-					System.out.println(m.getClassName() + " "
-							+ m.getMethodName() + " " + m.getFileName() + " "
-							+ m.getLineNumber());
 					m.replace("{$_ = $proceed();$_*=2;}");
 				}
 			} catch (Exception e) {
