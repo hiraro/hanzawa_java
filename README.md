@@ -4,12 +4,12 @@ intを返すメソッドを倍返しにするJavaAgentです.
 
     class Test {
 	    int return1() {
-		    System.out.println("##treturn1##");
+		    System.out.println("## return1 ##");
 		    return 1;
 	    }
 
 	    static int return2() {
-		    System.out.println("##treturn2##");
+		    System.out.println("## return2 ##");
 		    return 2;
 	    }
 
@@ -21,15 +21,15 @@ intを返すメソッドを倍返しにするJavaAgentです.
     }
     
     $ java Test
-    ##treturn1##
+    ## return1 ##
     1
-    ##treturn2##
+    ## return2 ##
     2
     
     $ java -javaagent:hanzawa.jar Test
-    ##treturn1##
+    ## return1 ##
     2
-    ##treturn2##
+    ## return2 ##
     4
     
 # ビルド
